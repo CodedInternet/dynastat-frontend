@@ -1,3 +1,8 @@
+@import "settings";
+@import 'foundation-sites/foundation';
+
+@include foundation-everything;
+
 canvas.sensors {
   background: url('/assets/img/feet.svg');
   background-size: contain;
