@@ -1,0 +1,19 @@
+<form class="{{if (eq side "right") "float-right"}}">
+  {{#each-in motors as |name motor|}}
+    <div class="row">
+      <div class="columns">
+        <label>{{{motor.label}}}
+          <div class="row">
+            <div class="columns small-6">
+              <input type="number" name="{{side}}_{{name}}" min="{{motor.min}}" max="{{motor.max}}"
+                     value="{{motor.target}}" onchange={{action "setMotor"}} disabled={{disabled}}/>
+            </div>
+            <div class="columns small-6 align-self-bottom">
+              <input type="number" value="{{motor.current}}" disabled/>
+            </div>
+          </div>
+        </label>
+      </div>
+    </div>
+  {{/each-in}}
+</form>
