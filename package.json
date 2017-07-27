@@ -24,7 +24,7 @@
     "ember-cli-babel": "^6.3.0",
     "ember-cli-dependency-checker": "^1.3.0",
     "ember-cli-eslint": "^3.0.0",
-    "ember-cli-foundation-6-sass": "^0.0.23",
+    "ember-cli-foundation-6-sass": "https://github.com/CodedInternet/ember-cli-foundation-6-sass/tarball/remove-bower",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^0.4.3",
     "ember-cli-inject-live-reload": "^1.4.1",
