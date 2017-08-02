@@ -10,6 +10,7 @@
     "ember-cli-babel": "^6.3.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "^0.4.3",
+    "ember-websockets": "^7.0.4",
     "msgpack-lite": "^0.1.26"
   }
 }
