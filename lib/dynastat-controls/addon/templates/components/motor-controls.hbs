@@ -5,8 +5,9 @@
         <label>{{{motor.label}}}
           <div class="row">
             <div class="columns small-6">
-              <input type="number" name="{{side}}_{{name}}" min="{{motor.min}}" max="{{motor.max}}"
-                     value="{{motor.target}}" onchange={{action "setMotor"}} disabled={{disabled}}/>
+              {{input type="number" name=(concat side "_" name) min=motor.min max=motor.max value=motor.target
+                      on-change="setMotor"
+                      disabled=(not conn.txOpen)}}
             </div>
             <div class="columns small-6 align-self-bottom">
               <input type="number" value="{{motor.current}}" disabled/>

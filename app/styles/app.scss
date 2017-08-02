@@ -10,4 +10,8 @@ canvas.sensors {
   background-repeat: no-repeat;
 
   width: 100%;
+
+  &.disabled {
+    filter: grayscale(100%);
+  }
 }
