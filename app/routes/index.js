@@ -4,9 +4,14 @@ export default Ember.Route.extend({
   connection: Ember.inject.service('webrtc-controls'),
 
   setupController(controller, model) {
-    const host = window.location.host;
+    const host = window.location.host,
+      secure = (window.location.protocol === "https:");
     const conn = this.get('connection');
 
-    conn.openConnection(`ws://${host}/ws/signal`);
+    let proto = 'ws:';
+    if(secure) {
+      proto = 'wss:'
+    }
+    conn.openConnection(`${proto}//${host}/ws/signal`);
   },
 });
