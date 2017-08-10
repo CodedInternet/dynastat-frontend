@@ -2,19 +2,26 @@
   {{#each-in motors as |name motor|}}
     <div class="row">
       <div class="columns">
-        <label>{{{motor.label}}}
-          <div class="row">
-            <div class="columns small-6">
-              <input type="number" name="{{name}}"
-                     min="{{motor.min}}" max="{{motor.max}}"
-                     value="{{motor.target}}" step="{{motor.step}}"
-                     onchange={{action "setMotor"}} disabled={{not conn.txOpen}} />
-            </div>
-            <div class="columns small-6 align-self-bottom">
-              <input type="number" step="{{motor.step}}" value="{{motor.current}}" disabled/>
-            </div>
+        <div class="row">
+          <div class="columns">
+            <label for="mc_{{side}}_{{name}}_target">{{{motor.label}}}</label>
           </div>
-        </label>
+          <div class="columns shrink">
+            <button {{action "homeMotor" name}} class="button tiny" disabled={{not conn.txOpen}}>Home
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="columns small-6">
+            <input type="number" name="{{name}}" id="mc_{{side}}_{{name}}_target"
+                   min="{{motor.min}}" max="{{motor.max}}"
+                   value="{{motor.target}}" step="{{motor.step}}"
+                   onchange={{action "setMotor"}} disabled={{not conn.txOpen}} />
+          </div>
+          <div class="columns small-6 align-self-bottom">
+            <input type="number" step="{{motor.step}}" value="{{motor.current}}" disabled/>
+          </div>
+        </div>
       </div>
     </div>
   {{/each-in}}
