@@ -2,6 +2,7 @@
 @import 'foundation-sites/foundation';
 
 @include foundation-everything;
+@include foundation-range-input;
 
 canvas.sensors {
   background: url('/assets/img/feet.svg');
