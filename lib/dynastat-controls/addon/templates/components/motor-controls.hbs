@@ -7,8 +7,9 @@
             <label for="mc_{{side}}_{{name}}_target">{{{motor.label}}}</label>
           </div>
           <div class="columns shrink">
-            <button {{action "homeMotor" name}} class="button tiny" disabled={{not conn.txOpen}}>Home
-            </button>
+            <a {{action "homeMotor" name on="click"}} class="button tiny" disabled={{not conn.txOpen}}>
+              Home
+            </a>
           </div>
         </div>
         <div class="row">
