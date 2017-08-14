@@ -1,8 +1,9 @@
+<canvas class="is-hidden" width="1920" height="1080" id="print-canvas"></canvas>
+
 <div class="row">
   <div class="columns text-right">
     <a class="button" {{action "saveImage" preventDefault=false}} id="print-canvas-save" disabled={{not
       connection.rxOpen}}>Save Image</a>
-    <canvas class="is-hidden" width="1920" height="1080" id="print-canvas"></canvas>
   </div>
 </div>
 
