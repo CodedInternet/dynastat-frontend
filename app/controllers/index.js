@@ -51,9 +51,8 @@ export default Ember.Controller.extend({
   },
 
   actions: {
-    saveImage(id) {
+    saveImage() {
       let canvas = Ember.$("#print-canvas")[0],
-        state = this.get('connection.state'),
         ctx = canvas.getContext("2d"),
         bg = this.get('bgImg'),
         sensors = this.get('sensors'),
