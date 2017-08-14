@@ -1,14 +1,22 @@
 <div class="row">
+  <div class="columns text-right">
+    <a class="button" {{action "saveImage" preventDefault=false}} id="print-canvas-save" disabled={{not
+      connection.rxOpen}}>Save Image</a>
+    <canvas class="is-hidden" width="1920" height="1080" id="print-canvas"></canvas>
+  </div>
+</div>
+
+<div class="row">
   <div class="small-3 columns align-self-middle">
-    {{motor-controls side="left"}}
+    {{motor-controls side="left" motors=motors.left}}
   </div>
 
   <div class="small-6 columns align-self-middle">
-    {{sensor-canvas data=connection.state}}
+    {{sensor-canvas data=connection.state sensors=sensors showZeros=showZeros}}
   </div>
 
   <div class="small-3 columns align-self-middle">
-    {{motor-controls side="right"}}
+    {{motor-controls side="right" motors=motors.right}}
   </div>
 </div>
 
