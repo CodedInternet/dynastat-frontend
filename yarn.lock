@@ -2482,9 +2482,9 @@ ember-cli-eslint@^3.0.0:
     rsvp "^3.2.1"
     walk-sync "^0.3.0"
 
-"ember-cli-foundation-6-sass@https://github.com/CodedInternet/ember-cli-foundation-6-sass/tarball/remove-bower":
-  version "0.0.23"
-  resolved "https://github.com/CodedInternet/ember-cli-foundation-6-sass/tarball/remove-bower#e1f89da3062fcf0be8817e2000160940a0d73547"
+ember-cli-foundation-6-sass@0.0.24:
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/ember-cli-foundation-6-sass/-/ember-cli-foundation-6-sass-0.0.24.tgz#491bda490e8c723bfb443a1f3f576e3f4d489a96"
   dependencies:
     babel-core "^6.20.0"
     babel-plugin-transform-es2015-arrow-functions "^6.8.0"
