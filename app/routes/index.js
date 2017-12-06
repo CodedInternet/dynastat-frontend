@@ -9,9 +9,21 @@ export default Ember.Route.extend({
     const conn = this.get('connection');
 
     let proto = 'ws:';
-    if(secure) {
+    if (secure) {
       proto = 'wss:'
     }
-    conn.openConnection(`${proto}//${host}/ws/signal`);
+
+    Ember.$.get('/api/ice_servers').then((response) => {
+      let iceServers = [];
+      for (let s of response) {
+        iceServers.push({
+          urls: s.Urls,
+          credential: s.Credential,
+          username: s.Username,
+        });
+      }
+
+      conn.openConnection(`${proto}//${host}/ws/signal`, iceServers);
+    });
   },
 });
