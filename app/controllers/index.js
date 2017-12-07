@@ -42,10 +42,10 @@ export default Ember.Controller.extend({
 
       ctx.textAlign = "right";
       // ctx.fillText(`${motors['foot_size'].current}`, x + offset, y);
-      ctx.fillText(`${motors["first_ray"].current} mm`, x + offset, y + size);
+      ctx.fillText(`${motors["first_ray"].current}º`, x + offset, y + size);
       ctx.fillText(this.formatFrontal(motors["forefoot_frontal"]), x + offset, y + size * 2);
       ctx.fillText(this.formatFrontal(motors["rearfoot_frontal"]), x + offset, y + size * 3);
-      ctx.fillText(`${motors["rearfoot_inclination"].current} mm`, x + offset, y + size * 4);
+      ctx.fillText(`${motors["rearfoot_inclination"].current}º`, x + offset, y + size * 4);
     }
     ctx.restore();
   },
