@@ -34,14 +34,14 @@ export default Ember.Controller.extend({
     {
       const size = 35;
       const offset = 520;
-      ctx.fillText('Foot Size', x + 0, y + 0);
+      // ctx.fillText('Foot Size', x + 0, y + 0);
       ctx.fillText('First Ray Plantarflexion', x + 0, y + size);
       ctx.fillText('Forefoot Frontal Plain', x + 0, y + size * 2);
       ctx.fillText('Rearfoot Frontal Plain', x + 0, y + size * 3);
       ctx.fillText('Rearfoot Inclination', x + 0, y + size * 4);
 
       ctx.textAlign = "right";
-      ctx.fillText(`${motors['foot_size'].current}`, x + offset, y);
+      // ctx.fillText(`${motors['foot_size'].current}`, x + offset, y);
       ctx.fillText(`${motors["first_ray"].current} mm`, x + offset, y + size);
       ctx.fillText(this.formatFrontal(motors["forefoot_frontal"]), x + offset, y + size * 2);
       ctx.fillText(this.formatFrontal(motors["rearfoot_frontal"]), x + offset, y + size * 3);
